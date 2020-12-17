@@ -7,6 +7,7 @@ export default new Vuex.Store({
   state: {
     step_number: '1',
     client_name: null,
+    to_product: 0,
     product_number: 0,
     box_size: 60,
     fba_warehouse: 'HND1',
@@ -27,6 +28,9 @@ export default new Vuex.Store({
     },
     setClientName: function (state, value) {
       state.client_name = window.localStorage.getItem(value)
+    },
+    setToProduct: function (state, value) {
+      state.to_product = value
     },
     setProductNumber: function (state, value) {
       state.product_number = window.localStorage.getItem(value)
